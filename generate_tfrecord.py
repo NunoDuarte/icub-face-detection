@@ -2,10 +2,10 @@
 Usage:
   # From tensorflow/models/
   # Create train data:
-  python3 generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=data/train.record
+  python3 generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=data/train.record --image_dir="PATH/TO/TRAIN/FOLDER"
 
   # Create test data:
-  python3 generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=data/test.record
+  python3 generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=data/test.record --image_dir="PATH/TO/TEST/FOLDER"
 """
 from __future__ import division
 from __future__ import print_function
