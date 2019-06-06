@@ -30,6 +30,16 @@ python3 object_detection/export_inference_graph.py     --input_type image_tensor
 2. add the frozen model to your program - frozen_inference_graph.pb
 3. add the labels of your model - icub_detection.pbtxt
 
+## Run in my project
+1. From tensorflow/models/research/
+``` bash
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim 
+```
+2. Add the object detection folder
+``` bash
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/object_detection
+```
+
 
 
 
