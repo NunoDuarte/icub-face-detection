@@ -20,5 +20,16 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim - to run the object_detection API
 12. add the model (ssd_model for now) + the .pbdx file to the training folder
 13. add the images of the dataset to a folder (icub_face) inside the object_detection API (still don't know what for)
 
+## Instructions on how to test the trained model
+
+After you have trained your model you want to test it. This is what you need to do:
+1. export the graph of your train model
+``` bash
+python3 object_detection/export_inference_graph.py     --input_type image_tensor     --pipeline_config_path object_detection/training/ssd_mobilenet_v1_pets.config     --trained_checkpoint_prefix object_detection/training/model.ckpt-200000 --output_directory object_detection/icub_graph/
+```
+2. add the frozen model to your program - frozen_inference_graph.pb
+3. add the labels of your model - icub_detection.pbtxt
+
+
 
 
